@@ -1,30 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1gp3q15tmyo8"]
+[gd_scene load_steps=5 format=3 uid="uid://c1gp3q15tmyo8"]
 
 [ext_resource type="PackedScene" uid="uid://7ji7ykrmea3y" path="res://Player/Bird.tscn" id="1_nprpa"]
 [ext_resource type="PackedScene" uid="uid://otibijdv7l4y" path="res://Scenes/Border.tscn" id="2_qo6cr"]
 [ext_resource type="Texture2D" uid="uid://bjs0ns67g3gg6" path="res://Sprites/download (5).jpeg" id="3_vylad"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvn48"]
+size = Vector2(571, 20)
+
 [node name="Node2D" type="StaticBody2D"]
 position = Vector2(421, 262)
-
-[node name="Border" parent="." instance=ExtResource("2_qo6cr")]
-position = Vector2(-418, 399)
-scale = Vector2(2.47505, 1)
-
-[node name="Border2" parent="." instance=ExtResource("2_qo6cr")]
-position = Vector2(-411, -279)
-rotation = 0.00142172
-scale = Vector2(2.47505, 1)
-
-[node name="Border3" parent="." instance=ExtResource("2_qo6cr")]
-position = Vector2(747, -281)
-rotation = 1.5708
-scale = Vector2(1.52, 1)
-
-[node name="Border4" parent="." instance=ExtResource("2_qo6cr")]
-position = Vector2(-430, -279)
-rotation = 1.5708
-scale = Vector2(1.52, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2
@@ -35,3 +19,28 @@ texture = ExtResource("3_vylad")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_nprpa")]
 position = Vector2(35, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(76, -276)
+shape = SubResource("RectangleShape2D_hvn48")
+
+[node name="Border Manager" type="Node" parent="."]
+
+[node name="Border" parent="Border Manager" instance=ExtResource("2_qo6cr")]
+position = Vector2(3, 661)
+scale = Vector2(2.47505, 1)
+
+[node name="Border3" parent="Border Manager" instance=ExtResource("2_qo6cr")]
+position = Vector2(1168, -19)
+rotation = 1.5708
+scale = Vector2(1.52, 1)
+
+[node name="Border4" parent="Border Manager" instance=ExtResource("2_qo6cr")]
+position = Vector2(-9, -17)
+rotation = 1.5708
+scale = Vector2(1.52, 1)
+
+[node name="Border2" parent="Border Manager" instance=ExtResource("2_qo6cr")]
+position = Vector2(10, -17)
+rotation = 0.00142172
+scale = Vector2(2.47505, 1)

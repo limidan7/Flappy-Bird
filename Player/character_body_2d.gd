@@ -11,12 +11,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	position.x = 35
-	$AnimatedSprite2D.play("Flying")
+	
 	
 	
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = jump_force
+		$AnimatedSprite2D.play("Flying")
+	
 		
 		
 		

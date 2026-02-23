@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce1w3mo4radym"]
 
-[ext_resource type="Texture2D" uid="uid://dnewdbf1beosx" path="res://Sprites/203-2032447_mario-pipe-png-super-mario-pipe-png-transparent-removebg-preview.png" id="1_610ge"]
+[ext_resource type="Texture2D" uid="uid://dnewdbf1beosx" path="res://Sprites/pipe.png" id="1_610ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyahf"]
 size = Vector2(153, 424)

@@ -19,17 +19,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_r7h6l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_ni2g7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_rvdau")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_r7h6l")
 }],
-"loop": false,
+"loop": true,
 "name": &"Flying",
 "speed": 10.0
 }]
@@ -45,5 +36,4 @@ texture_filter = 1
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_gc18n")
 animation = &"Flying"
-frame = 5
-frame_progress = 1.0
+frame_progress = 0.158681
