@@ -11,6 +11,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	position.x = 35
+	$AnimatedSprite2D.play("Flying")
 	
 	
 	
