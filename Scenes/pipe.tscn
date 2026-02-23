@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce1w3mo4radym"]
+
+[ext_resource type="Texture2D" uid="uid://dnewdbf1beosx" path="res://Sprites/203-2032447_mario-pipe-png-super-mario-pipe-png-transparent-removebg-preview.png" id="1_610ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyahf"]
+size = Vector2(153, 424)
+
+[node name="Pipe" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(487.5, 362)
+shape = SubResource("RectangleShape2D_hyahf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(488, 363)
+texture = ExtResource("1_610ge")
