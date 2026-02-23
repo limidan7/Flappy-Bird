@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var jump_force: float = -500
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position.x = 35
+	position.x = 36
 	rotation_degrees = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
