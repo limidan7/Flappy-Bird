@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce1w3mo4radym"]
+[gd_scene load_steps=5 format=3 uid="uid://ce1w3mo4radym"]
 
 [ext_resource type="Texture2D" uid="uid://dtvyhhsy8puom" path="res://Sprites/Pipe stalagmite.png" id="1_58nub"]
 [ext_resource type="Texture2D" uid="uid://dvkvc3crck84y" path="res://Sprites/Pipe stalagtite.png" id="1_i6fi1"]
+[ext_resource type="Script" path="res://Scripts/Pipe.gd" id="1_xgdsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hyahf"]
 size = Vector2(98, 255.5)
 
 [node name="Pipe" type="StaticBody2D"]
+script = ExtResource("1_xgdsd")
 
 [node name="UpCollision" type="CollisionShape2D" parent="."]
 position = Vector2(587, 517.75)

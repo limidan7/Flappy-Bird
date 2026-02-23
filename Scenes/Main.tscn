@@ -48,5 +48,5 @@ rotation = 0.00142172
 scale = Vector2(2.47505, 1)
 
 [node name="Pipe" parent="." instance=ExtResource("3_v0uk1")]
-position = Vector2(159, -233)
+position = Vector2(271, -230)
 scale = Vector2(0.9, 0.9)
