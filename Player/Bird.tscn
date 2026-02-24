@@ -1,12 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://7ji7ykrmea3y"]
+[gd_scene load_steps=12 format=3 uid="uid://7ji7ykrmea3y"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_wu6c7"]
 [ext_resource type="Texture2D" uid="uid://bvoe7npqn5xhk" path="res://Sprites/Blue jay flappy bird .png" id="2_ni2g7"]
 [ext_resource type="Texture2D" uid="uid://0tyia52x2v0o" path="res://Sprites/Blue jay flappy bird 2 .png" id="3_rvdau"]
 [ext_resource type="Texture2D" uid="uid://dpympm8mvi2v1" path="res://Sprites/Blue jay flappy bird 3 .png" id="4_r7h6l"]
+[ext_resource type="Texture2D" uid="uid://bgah8war8mv77" path="res://Sprites/Blue jay flappy bird -sheet.png" id="5_ow27t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jbbmu"]
 radius = 50.01
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gb1y"]
+atlas = ExtResource("5_ow27t")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcsmj"]
+atlas = ExtResource("5_ow27t")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dkb4"]
+atlas = ExtResource("5_ow27t")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ingxs"]
+atlas = ExtResource("5_ow27t")
+region = Rect2(60, 0, 20, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gc18n"]
 animations = [{
@@ -32,6 +49,23 @@ animations = [{
 "loop": false,
 "name": &"Flying",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gb1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcsmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dkb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ingxs")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 7.0
 }]
 
 [node name="Bird" type="CharacterBody2D"]
@@ -44,6 +78,6 @@ shape = SubResource("CircleShape2D_jbbmu")
 texture_filter = 1
 scale = Vector2(6.05, 6.05)
 sprite_frames = SubResource("SpriteFrames_gc18n")
-animation = &"Flying"
-frame = 5
+animation = &"new_animation"
+frame = 3
 frame_progress = 1.0

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://7ji7ykrmea3y" path="res://Player/Bird.tscn" id="1_nprpa"]
 [ext_resource type="PackedScene" uid="uid://otibijdv7l4y" path="res://Scenes/Border.tscn" id="2_qo6cr"]
-[ext_resource type="PackedScene" uid="uid://ce1w3mo4radym" path="res://Scenes/pipe.tscn" id="3_v0uk1"]
 [ext_resource type="Texture2D" uid="uid://bjs0ns67g3gg6" path="res://Sprites/download (5).jpeg" id="3_vylad"]
+[ext_resource type="PackedScene" uid="uid://0ecc06iqatsc" path="res://pipe.tscn" id="4_kjbuj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvn48"]
 size = Vector2(571, 20)
@@ -47,6 +47,5 @@ position = Vector2(10, -17)
 rotation = 0.00142172
 scale = Vector2(2.47505, 1)
 
-[node name="Pipe" parent="." instance=ExtResource("3_v0uk1")]
-position = Vector2(271, -230)
-scale = Vector2(0.9, 0.9)
+[node name="Pipe" parent="." instance=ExtResource("4_kjbuj")]
+position = Vector2(613, 34)
