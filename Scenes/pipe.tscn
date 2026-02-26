@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://0ecc06iqatsc"]
+[gd_scene load_steps=8 format=3 uid="uid://0ecc06iqatsc"]
 
 [ext_resource type="Script" path="res://Scripts/pipe.gd" id="1_eam3j"]
 [ext_resource type="Texture2D" uid="uid://dtvyhhsy8puom" path="res://Sprites/Pipe stalagmite.png" id="1_l60s4"]
+[ext_resource type="Script" path="res://Scenes/lower_pipe.gd" id="2_tx4vs"]
 [ext_resource type="Script" path="res://Scenes/score_detector.gd" id="3_l47as"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jynl"]
@@ -11,7 +12,7 @@ size = Vector2(26.6, 89.2)
 size = Vector2(27, 90)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl5aq"]
-size = Vector2(12.6, 31.2)
+size = Vector2(0.6, 31.2)
 
 [node name="Pipe" type="CharacterBody2D"]
 scale = Vector2(5, 5)
@@ -19,6 +20,7 @@ script = ExtResource("1_eam3j")
 
 [node name="Lower Pipe" type="Area2D" parent="."]
 position = Vector2(0, 60)
+script = ExtResource("2_tx4vs")
 
 [node name="Lower Sprite" type="Sprite2D" parent="Lower Pipe"]
 texture_filter = 1
@@ -28,7 +30,6 @@ texture = ExtResource("1_l60s4")
 
 [node name="Lower Collider" type="CollisionShape2D" parent="Lower Pipe"]
 position = Vector2(-0.3, -7.62939e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0jynl")
 
 [node name="Upper Pipe" type="Area2D" parent="."]
@@ -37,7 +38,6 @@ shape = SubResource("RectangleShape2D_0jynl")
 z_index = 3
 position = Vector2(-0.6, -60)
 rotation = 3.14159
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_358f4")
 
 [node name="Upper Sprite" type="Sprite2D" parent="Upper Pipe"]
@@ -51,8 +51,9 @@ texture = ExtResource("1_l60s4")
 script = ExtResource("3_l47as")
 
 [node name="Score Collider" type="CollisionShape2D" parent="Score detector"]
-position = Vector2(6.5, 0.399999)
-scale = Vector2(1, 1)
+position = Vector2(12.5, 0.399999)
 shape = SubResource("RectangleShape2D_kl5aq")
 
+[connection signal="area_entered" from="Lower Pipe" to="Lower Pipe" method="_on_area_entered"]
 [connection signal="area_entered" from="Score detector" to="Score detector" method="_on_area_entered"]
+[connection signal="body_entered" from="Score detector" to="Score detector" method="_on_body_entered"]

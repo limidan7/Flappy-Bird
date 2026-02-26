@@ -17,7 +17,7 @@ config/icon="res://Sprites/icon.svg"
 
 [autoload]
 
-Score="*res://score.gd"
+Score="*res://Scripts/score.gd"
 
 [input]
 

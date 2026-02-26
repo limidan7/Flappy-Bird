@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Bird extends CharacterBody2D
 
 @export var gravity: float = 1750
 @export var jump_force: float = -500
