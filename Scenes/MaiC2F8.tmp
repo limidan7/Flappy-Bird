@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://c1gp3q15tmyo8"]
+[gd_scene load_steps=15 format=4 uid="uid://c1gp3q15tmyo8"]
 
 [ext_resource type="PackedScene" uid="uid://7ji7ykrmea3y" path="res://Player/Bird.tscn" id="1_nprpa"]
 [ext_resource type="Texture2D" uid="uid://c6fupyhyqiulh" path="res://Sprites/background.png" id="1_w10ci"]
 [ext_resource type="PackedScene" uid="uid://otibijdv7l4y" path="res://Scenes/Border.tscn" id="2_qo6cr"]
 [ext_resource type="PackedScene" uid="uid://0ecc06iqatsc" path="res://Scenes/pipe.tscn" id="4_kjbuj"]
 [ext_resource type="PackedScene" uid="uid://lbausumv7by2" path="res://Scenes/spawner.tscn" id="5_q5wfq"]
+[ext_resource type="FontFile" uid="uid://bqwc6u265jfgb" path="res://Sprites/flappy-bird-font.ttf" id="6_hwvea"]
 [ext_resource type="Script" path="res://Scenes/label.gd" id="6_qsrhg"]
 
 [sub_resource type="Image" id="Image_biumg"]
@@ -181,6 +182,7 @@ cache/0/34/1/glyphs/16/uv_rect = Rect2(46, 1, 37, 34)
 cache/0/34/1/glyphs/16/texture_idx = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_26tyl"]
+font = ExtResource("6_hwvea")
 font_size = 34
 font_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 1, 1)

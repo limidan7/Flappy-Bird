@@ -59,7 +59,6 @@ script = ExtResource("3_l47as")
 
 [node name="Score Collider" type="CollisionShape2D" parent="Score detector"]
 position = Vector2(11.9, -6.7)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kl5aq")
 
 [node name="Lower Pipe Physical" type="CollisionShape2D" parent="."]
@@ -69,7 +68,6 @@ shape = SubResource("RectangleShape2D_kefe5")
 
 [node name="Upper Pipe Physical" type="CollisionShape2D" parent="."]
 position = Vector2(9.0599e-07, -83.6)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_crsss")
 
 [connection signal="area_entered" from="Lower Pipe" to="Lower Pipe" method="_on_area_entered"]

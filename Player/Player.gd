@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	position.x = 35
 	
-
+	
 
 	if can_click == true:
 		if Input.is_action_just_pressed("ui_accept"):
@@ -27,5 +27,6 @@ func _physics_process(delta: float) -> void:
 func die():
 	can_click = false
 	$AnimatedSprite2D.play("Death")
+	Autoload.game_over.emit()
 	
 	gravity = 1500

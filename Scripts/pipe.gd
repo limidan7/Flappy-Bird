@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Score.can_move == true:
+	if Autoload.can_move == true:
 		position.x += movespeed*delta
 
 
@@ -19,12 +19,12 @@ func _process(delta: float) -> void:
 
 func _on_upper_pipe_body_entered(body: Node2D) -> void:
 	if body is Bird:
-		Score.can_move = false
+		Autoload.can_move = false
 		body.die()
 		
 
 
 func _on_lower_pipe_body_entered(body: Node2D) -> void:
 		if body is Bird:
-			Score.can_move = false
+			Autoload.can_move = false
 			body.die()
