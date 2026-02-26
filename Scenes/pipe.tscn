@@ -16,7 +16,7 @@ size = Vector2(27, 90)
 size = Vector2(1, 67.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kefe5"]
-size = Vector2(25, 88.2)
+size = Vector2(25, 85.4332)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crsss"]
 size = Vector2(27.2, 89.6)
@@ -63,7 +63,7 @@ scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kl5aq")
 
 [node name="Lower Pipe Physical" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 69.5)
+position = Vector2(-0.5, 70.9626)
 scale = Vector2(1.06398, 1.05726)
 shape = SubResource("RectangleShape2D_kefe5")
 
