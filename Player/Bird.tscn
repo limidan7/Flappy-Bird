@@ -71,7 +71,7 @@ texture_filter = 1
 scale = Vector2(6.05, 6.05)
 sprite_frames = SubResource("SpriteFrames_gc18n")
 animation = &"Death"
-frame_progress = 0.674459
+frame_progress = 0.28095
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 visible = false
