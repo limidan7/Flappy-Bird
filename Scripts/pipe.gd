@@ -1,6 +1,6 @@
-extends CharacterBody2D
+extends StaticBody2D
 
-const movespeed = -100
+const movespeed = -150
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	position.y = randf_range(0, 160)
@@ -10,7 +10,21 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	velocity.x = movespeed
+	if Score.can_move == true:
+		position.x += movespeed*delta
 
 
-	move_and_slide()
+	
+
+
+func _on_upper_pipe_body_entered(body: Node2D) -> void:
+	if body is Bird:
+		Score.can_move = false
+		body.die()
+		
+
+
+func _on_lower_pipe_body_entered(body: Node2D) -> void:
+		if body is Bird:
+			Score.can_move = false
+			body.die()
