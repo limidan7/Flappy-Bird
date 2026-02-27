@@ -13,7 +13,9 @@ func _process(delta: float) -> void:
 	if Autoload.can_move == true:
 		position.x += movespeed*delta
 
-
+func off_screen():
+	if position.x > 500:
+		self.queue_free()
 	
 
 
