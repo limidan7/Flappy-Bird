@@ -5,7 +5,7 @@ var indexz = z_index
 func _ready() -> void:
 	position.x = 0
 	position.y = 0
-	z_index = -3
+	hide()
 	
 	Autoload.game_over.connect(replay_button_appear)
 
@@ -16,7 +16,12 @@ func _process(delta: float) -> void:
 
 func replay_button_appear():
 	print("replay")
-	indexz = 0
+	show()
 	
 	
 	
+
+
+func _on_pressed() -> void:
+	get_tree().reload_current_scene()
+	Autoload.can_move = true
