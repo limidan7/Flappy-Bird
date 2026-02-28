@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://6bapnf3tocx2"]
 
 [ext_resource type="Texture2D" uid="uid://tf0upkr7x1ey" path="res://Sprites/Replay_Button.png" id="1_g4km8"]
-[ext_resource type="Script" path="res://Scenes/replay_button.gd" id="2_xj17a"]
+[ext_resource type="Script" path="res://Scripts/replay_button.gd" id="2_xj17a"]
 
 [node name="Replay Button" type="TextureButton"]
 texture_filter = 1

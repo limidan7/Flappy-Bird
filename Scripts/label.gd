@@ -15,6 +15,6 @@ func _process(delta: float) -> void:
 	
 func game_over_text():
 	game_over_variable = true
-	print("GameOVER")
-	text = "GAMEOVER Your score was " + str_label 
+	print(str(Autoload.Game_Score))
+	text = "GAMEOVER \n Your score was " + str(Autoload.Game_Score)
 	

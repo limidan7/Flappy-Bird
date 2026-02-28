@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nr8aajfho70n"]
+
+[ext_resource type="Texture2D" uid="uid://dpbeykdarnrls" path="res://Sprites/Exit_Button.png" id="1_n570s"]
+[ext_resource type="Script" path="res://Scenes/exit_button.gd" id="2_emdj8"]
+
+[node name="Exit_Button" type="TextureButton"]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_n570s")
+script = ExtResource("2_emdj8")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

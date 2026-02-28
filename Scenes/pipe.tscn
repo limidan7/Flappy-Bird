@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/pipe.gd" id="1_eam3j"]
 [ext_resource type="Texture2D" uid="uid://dtvyhhsy8puom" path="res://Sprites/Pipe stalagmite.png" id="1_l60s4"]
-[ext_resource type="Script" path="res://Scenes/lower_pipe.gd" id="2_tx4vs"]
-[ext_resource type="Script" path="res://Scenes/score_detector.gd" id="3_l47as"]
+[ext_resource type="Script" path="res://Scripts/lower_pipe.gd" id="2_tx4vs"]
+[ext_resource type="Script" path="res://Scripts/score_detector.gd" id="3_l47as"]
 [ext_resource type="Texture2D" uid="uid://dvkvc3crck84y" path="res://Sprites/Pipe stalagtite.png" id="4_e6j6a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jynl"]
