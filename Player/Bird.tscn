@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjowstlgffpym" path="res://Sprites/Blue jay flappy bird2 4.png" id="5_hwtu6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jbbmu"]
-radius = 46.0
+radius = 39.0222
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gc18n"]
 animations = [{

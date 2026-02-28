@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c1gp3q15tmyo8"]
+[gd_scene load_steps=17 format=4 uid="uid://c1gp3q15tmyo8"]
 
 [ext_resource type="PackedScene" uid="uid://7ji7ykrmea3y" path="res://Player/Bird.tscn" id="1_nprpa"]
 [ext_resource type="Texture2D" uid="uid://c6fupyhyqiulh" path="res://Sprites/background.png" id="1_w10ci"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://0ecc06iqatsc" path="res://Scenes/pipe.tscn" id="4_kjbuj"]
 [ext_resource type="PackedScene" uid="uid://6bapnf3tocx2" path="res://Scenes/replay_button.tscn" id="5_7yu7w"]
 [ext_resource type="PackedScene" uid="uid://lbausumv7by2" path="res://Scenes/spawner.tscn" id="5_q5wfq"]
+[ext_resource type="FontFile" uid="uid://dymipusg8puue" path="res://Sprites/Flappy-Bird.ttf" id="6_aweyj"]
 [ext_resource type="Script" path="res://Scenes/label.gd" id="6_qsrhg"]
+[ext_resource type="Script" path="res://Scenes/color_rect.gd" id="8_aypym"]
 
 [sub_resource type="Image" id="Image_biumg"]
 data = {
@@ -182,19 +184,45 @@ cache/0/34/1/glyphs/16/uv_rect = Rect2(46, 1, 37, 34)
 cache/0/34/1/glyphs/16/texture_idx = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_26tyl"]
-font_size = 34
+font = ExtResource("6_aweyj")
+font_size = 60
 font_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 1, 1)
 
 [node name="Main" type="StaticBody2D"]
 position = Vector2(421, 262)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="TextureRect" parent="."]
 z_index = -2
 texture_filter = 1
-position = Vector2(151, 67)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -457.0
+offset_top = -279.0
+offset_right = -357.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(12.0991, 12.25)
 texture = ExtResource("1_w10ci")
+stretch_mode = 6
+
+[node name="Sprite2D2" type="TextureRect" parent="."]
+z_index = -3
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 739.0
+offset_top = -279.0
+offset_right = 839.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(12.0991, 12.25)
+texture = ExtResource("1_w10ci")
+stretch_mode = 6
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_nprpa")]
 position = Vector2(35, 2)
@@ -212,12 +240,13 @@ rotation = 0.00142172
 scale = Vector2(2.47505, 1)
 
 [node name="Pipe" parent="." instance=ExtResource("4_kjbuj")]
-position = Vector2(915, 65)
+position = Vector2(1018, 65)
 
 [node name="Spawner" parent="." instance=ExtResource("5_q5wfq")]
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
+z_index = 2
 offset_left = -7.0
 offset_top = -221.0
 offset_right = 290.0
@@ -229,13 +258,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_qsrhg")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -656.0
+offset_top = -341.0
+offset_right = 1716.0
+offset_bottom = 553.0
+size_flags_horizontal = 6
+color = Color(0, 0, 0, 0.572549)
+script = ExtResource("8_aypym")
+
 [node name="Replay Button" parent="." instance=ExtResource("5_7yu7w")]
-anchors_preset = 4
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -82.0
-offset_bottom = -42.0
+offset_left = -37.5
+offset_top = -15.0
+offset_right = 37.5
+offset_bottom = 15.0
+grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3.72, 3.72)
 size_flags_horizontal = 4
-size_flags_vertical = 4

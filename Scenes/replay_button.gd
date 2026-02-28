@@ -8,7 +8,7 @@ func _ready() -> void:
 	hide()
 	
 	Autoload.game_over.connect(replay_button_appear)
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,5 +23,7 @@ func replay_button_appear():
 
 
 func _on_pressed() -> void:
+	print("pressed")
 	get_tree().reload_current_scene()
 	Autoload.can_move = true
+	Autoload.Game_Score = 0

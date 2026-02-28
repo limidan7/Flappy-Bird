@@ -1,5 +1,5 @@
 extends Label
-
+var str_label = str(Autoload.Game_Score)
 @onready var game_over_variable : bool
 
 # Called when the node enters the scene tree for the first time.
@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 func game_over_text():
 	game_over_variable = true
 	print("GameOVER")
-	text = "gameover"
+	text = "GAMEOVER Your score was " + str_label 
 	
